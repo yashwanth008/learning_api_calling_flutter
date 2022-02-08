@@ -31,23 +31,23 @@ class _HomePageState extends State<HomePage> {
    @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text(
-      //     "Food recipe"
-      //   ),
-      // ),
-      // body: isLoading?
-      //     Center(child:CircularProgressIndicator(),)
-      //     :ListView.builder(
-      //   itemCount: _recipes.length,
-      //     itemBuilder: (BuildContext context ,index){
-      //     return RecipeCard(
-      //         title: _recipes[index].name,
-      //         cookTime:_recipes[index].totalTime,
-      //         rating: _recipes[index].rating.toString(),
-      //         thumbnailUrl: _recipes[index].images,
-      //     );
-      //     })
+      appBar: AppBar(
+        title: Text(
+          "Food recipe"
+        ),
+      ),
+      body: isLoading?
+          Center(child:CircularProgressIndicator(),)
+          :ListView.builder(
+        itemCount: _recipes.length,
+          itemBuilder: (BuildContext context ,index){
+          return RecipeCard(
+              title: _recipes[index].name,
+              cookTime:_recipes[index].totalTime,
+              rating: _recipes[index].rating.toString(),
+              thumbnailUrl: _recipes[index].images,
+          );
+          })
     );
   }
 }
